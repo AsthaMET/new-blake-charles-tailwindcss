@@ -1,0 +1,13 @@
+/* .header1{
+  @apply fixed bg-black flex container-md py-3.5 items-center justify-between w-full;
+} */
+
+.link-effect {
+  /* relative */
+  @apply after:absolute after:inset-0 after:w-full after:h-full;
+}
+
+.bg-black {
+  @apply bg-black;
+}
+

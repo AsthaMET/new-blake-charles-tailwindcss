@@ -1,0 +1,25 @@
+.container-md {
+  @apply 2xs:px-[30px] md:px-[55px];
+}
+.btn {
+  @apply py-[5.5px] px-[23.5px] border-2 border-skin text-skin font-inter font-bold uppercase cursor-pointer transition-all duration-700 ease-in-out;
+}
+.black-border-btn {
+  @apply hover:bg-skin hover:border-skin hover:text-black;
+}
+.announcement-btn div {
+  @apply 2xs:w-full 2xs:text-center sm:w-fit sm:justify-between content-center;
+}
+
+
+.gradiant {
+  background: radial-gradient(
+      114.6% 55.11% at 50% 58.09%,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 50%);
+}
+.gradiant2{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 56.81%, #FFFFFF 100%);
+}

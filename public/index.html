@@ -1,16 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Compass</title>
-    <link href="./styles.css" rel="stylesheet" />
-  </head>
-  <body>
-   
-    
 
-    <!-- Scripts -->
-    <script src="./assets/js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blake Charles</title>
+  <link href="./styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Announcement-bar -->
+  <div id="Announcement-bar"
+    class="container-md fixed top-0 left-0 w-full z-50 flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 gap-3 sm:gap-0">
+    <div>
+      <span class= "font-inter font-normal">This is the first example of a sitewide notice.</span>
+    </div>
+    <div
+      class="announcement-btn 2xs:hidden min-[1200px]:flex flex gap-5 h-auto 2xs:flex-col sm:flex-row 2xs:mt-3 sm:mt-0 2xs:w-full sm:w-fit">
+      <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin!">
+        <a href="#">Book now</a>
+      </div>
+      <div class="btn black-border-btn">
+        <a href="#">Find A Stylist</a>
+      </div>
+      <div class="btn black-border-btn">
+        <a href="#">Gift</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <nav
+      class="container-md 2xs:top-[67px] min-[391px]:top-[53px] min-[1200px]:top-[67px] flex justify-between fixed w-full z-50  items-center py-5">
+      <a href="#"><img src="./assets/images/logo.png" /></a>
+
+      <div class="hidden min-[1200px]:flex gap-6 items-center">
+        <a href="#">SF Luxury Services</a>
+        <a href="#">Granite Bay Luxury Services</a>
+        <a href="#">Spa Amenities</a>
+        <a href="#">Blake Charles Experience</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <a href="#">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_21878_36)">
+            <path
+              d="M19.2892 15.7606L15.9975 12.4688C16.596 11.2718 16.995 9.87531 16.995 8.4788C16.995 3.79052 13.2044 0 8.51616 0C3.82788 0 0.0373535 3.79052 0.0373535 8.4788C0.0373535 13.1671 3.82788 16.9576 8.51616 16.9576C9.91266 16.9576 11.3092 16.5586 12.5062 15.9601L15.798 19.2519C16.7955 20.2494 18.2917 20.2494 19.2892 19.2519C20.187 18.2544 20.187 16.7581 19.2892 15.7606ZM8.51616 14.9626C4.92513 14.9626 2.03237 12.0698 2.03237 8.4788C2.03237 4.88778 4.92513 1.99501 8.51616 1.99501C12.1072 1.99501 14.9999 4.88778 14.9999 8.4788C14.9999 12.0698 12.1072 14.9626 8.51616 14.9626Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_21878_36">
+              <rect width="20" height="20" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <button id="menuButton" class="py-3 px-4 mx-2 rounded focus:outline-none cursor-pointer min-[1200px]:hidden">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="" aria-hidden="true"
+          focusable="false">
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+
+        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="hidden" aria-hidden="true"
+          focusable="false">
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
+        </svg>
+
+        <div id="mobileMenu"
+          class="absolute top-[87px] right-0 h-fit w-full text-skin border opacity-0 group-focus:right-0 group-focus:opacity-100 transition">
+          <ul class="flex flex-col items-center w-full text-base cursor-pointer py-7">
+            <li><a href="#">SF Luxury Services</a></li>
+            <li><a href="#">Granite Bay Luxury Services</a></li>
+            <li><a href="#">Spa Amenities</a></li>
+            <li><a href="#">Blake Charles Experience</a></li>
+            <li><a href="#">Contact</a></li>
+            <div class="announcement-btn h-auto w-[90%] flex-col">
+              <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin! min-w-full my-4">
+                <a href="#">Book now</a>
+              </div>
+              <div class="btn black-border-btn min-w-full my-4">
+                <a href="#">Find A Stylist</a>
+              </div>
+              <div class="btn black-border-btn min-w-full my-4">
+                <a href="#">Gift</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </button>
+    </nav>
+  </header>
+
+  <div class="h-screen w-screen gradiant z-50">
+    <div class="relative inset-0 -z-10">
+      <img src="./assets/images/hero2.jpg" alt="hero img 1" class="h-screen w-screen object-cover" />
+    </div>
+    <div class="hero-text absolute top-[59%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-max">
+      <h1 class="font-sinkin-sans-bold">Blake Charles Experience</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="relative flex">
+      <div class="max-w-[756px] object-cover"><img src="./assets/images/section2.jpg" alt="images"></div>
+      <div class="flex gap-10 items-center">
+        <div class="border-[3px] border-gray h-[494px] items-center"></div>
+        <div class="my-20 mr-[100px] py-5">
+          <h2>
+            <span class="font-sinkin-sans-bold">The Best Hair Salon</span>
+            <span class="font-sinkin-sans-regular">In San Francisco & Granite Bay</span>
+          </h2>
+          <p class="pt-5">
+            <span>At Blake Charles Salon we’re committed to making you look and feel exceptional. We
+              create a look that works for you—your style, your personality, your life. Our global team brings artistry,
+              experience and passion to everything they do.</span>
+            <span class="mt-2.5">Our teams’ results speak for themselves. From the perfect cut to head-to-toe
+              pampering, Blake Charles Salon delivers exceptional experiences. View the services we offer and book
+              now.</span>
+          </p>
+          <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin! mt-[30px] w-fit!">
+            <a href="#">Find A Stylist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

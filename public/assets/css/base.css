@@ -1,5 +1,43 @@
 @layer base {
 
-  
+  h1{
+    @apply uppercase text-[64px] leading-[74px];
+  }
+  h2{
+    @apply uppercase text-[48px] leading-[58px];
+  }
+  p{
+    @apply font-inter text-dark-gray text-base;
+  }
+  span{
+    @apply block font-inter;
+  }
+  .transition {
+    @apply transition-all duration-700 ease-in-out;
+  }
+  .active_nav {
+    @apply bg-black max-w-full top-0 py-[33px] transition;
+  }
+  nav > div:first-of-type {
+    @apply text-white font-inter font-normal leading-[19px] tracking-[0.003em];
+  }
+  nav > div a {
+    @apply hover:text-skin;
+  }
+  #mobileMenu li {
+    @apply hover:text-gray-200 py-4 px-6 w-full;
+  }
+  nav img{
+    @apply big:max-w-[296.54px] big:max-h-20 2xs:max-w-[180px] 2xs:max-h-20 500:max-w-[210px] 500:max-h-20;
+  }
+  nav button svg{
+    @apply w-8 h-8 text-white cursor-pointer;
+  }
+  #Announcement-bar,#mobileMenu{
+    @apply bg-black;
+  }
+  #Announcement-bar,#Announcement-bar span,.hero-text{
+    @apply text-white;
+  }
   
 }
