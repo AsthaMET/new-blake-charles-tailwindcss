@@ -26,9 +26,9 @@
 
 @font-face {
   font-family: "sinkin-sans-bold";
-  src: url('../public/assets/Fonts/sinkin-sans.700-bold.otf');
+  src: url('./assets/Fonts/sinkin-sans.700-bold.otf');
 }
 @font-face {
   font-family: "sinkin-sans-regular";
-  src: url('../public/assets/Fonts/sinkin-sans.400-regular.otf');
+  src: url('./assets/Fonts/sinkin-sans.400-regular.otf');
 }
