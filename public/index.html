@@ -18,7 +18,7 @@
   <div id="Announcement-bar"
     class="container-md fixed top-0 left-0 w-full z-50 flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 gap-3 sm:gap-0">
     <div>
-      <span class= "font-inter font-normal">This is the first example of a sitewide notice.</span>
+      <span class="font-inter font-normal block">This is the first example of a sitewide notice.</span>
     </div>
     <div
       class="announcement-btn 2xs:hidden min-[1200px]:flex flex gap-5 h-auto 2xs:flex-col sm:flex-row 2xs:mt-3 sm:mt-0 2xs:w-full sm:w-fit">
@@ -34,9 +34,10 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header>
     <nav
-      class="container-md 2xs:top-[67px] min-[391px]:top-[53px] min-[1200px]:top-[67px] flex justify-between fixed w-full z-50  items-center py-5">
+      class="container-md 2xs:top-[67px] min-[391px]:top-[51px] min-[1200px]:top-[67px] flex justify-between fixed w-full z-50  items-center py-5">
       <a href="#"><img src="./assets/images/logo.png" /></a>
 
       <div class="hidden min-[1200px]:flex gap-6 items-center">
@@ -73,9 +74,9 @@
           <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
         </svg>
 
-        <div id="mobileMenu"
-          class="absolute top-[87px] right-0 h-fit w-full text-skin border opacity-0 group-focus:right-0 group-focus:opacity-100 transition">
-          <ul class="flex flex-col items-center w-full text-base cursor-pointer py-7">
+        <!-- Mobile Menu -->
+        <div id="mobileMenu">
+          <ul class="flex flex-col items-center text-base py-7">
             <li><a href="#">SF Luxury Services</a></li>
             <li><a href="#">Granite Bay Luxury Services</a></li>
             <li><a href="#">Spa Amenities</a></li>
@@ -98,39 +99,122 @@
     </nav>
   </header>
 
-  <div class="h-screen w-screen gradiant z-50">
+  <!-- Hero section -->
+  <div class="h-screen w-full gradiant z-50">
     <div class="relative inset-0 -z-10">
       <img src="./assets/images/hero2.jpg" alt="hero img 1" class="h-screen w-screen object-cover" />
     </div>
-    <div class="hero-text absolute top-[59%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-max">
+    <div class="hero-text absolute top-[59%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[inherit] px-2.5">
       <h1 class="font-sinkin-sans-bold">Blake Charles Experience</h1>
     </div>
   </div>
 
+  <!-- The Best Hair Salon -->
   <section>
-    <div class="relative flex">
-      <div class="max-w-[756px] object-cover"><img src="./assets/images/section2.jpg" alt="images"></div>
-      <div class="flex gap-10 items-center">
-        <div class="border-[3px] border-gray h-[494px] items-center"></div>
-        <div class="my-20 mr-[100px] py-5">
+    <div class="relative flex 2xs:flex-col lg:flex-row">
+      <div id="img-container">
+        <img src="./assets/images/section2.jpg" alt="Salon">
+        <div class="absolute inset-0 img-gradiant-right"></div>
+      </div>
+
+      <div class="content-container-right">
+        <div class="vertical-divider"></div>
+        <div class="inner-container-right">
           <h2>
-            <span class="font-sinkin-sans-bold">The Best Hair Salon</span>
-            <span class="font-sinkin-sans-regular">In San Francisco & Granite Bay</span>
+            <span class="font-sinkin-sans-bold block">The Best Hair Salon</span>
+            <span class="font-sinkin-sans-regular block">In San Francisco & Granite Bay</span>
           </h2>
-          <p class="pt-5">
+          <p class="mt-5">
             <span>At Blake Charles Salon we’re committed to making you look and feel exceptional. We
               create a look that works for you—your style, your personality, your life. Our global team brings artistry,
               experience and passion to everything they do.</span>
-            <span class="mt-2.5">Our teams’ results speak for themselves. From the perfect cut to head-to-toe
+            <span class="mt-[19px]">Our teams’ results speak for themselves. From the perfect cut to head-to-toe
               pampering, Blake Charles Salon delivers exceptional experiences. View the services we offer and book
               now.</span>
           </p>
-          <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin! mt-[30px] w-fit!">
+          <div class="btn bg-skin-btn">
             <a href="#">Find A Stylist</a>
           </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- About Us -->
+  <section>
+    <div class="relative flex 2xs:flex-col lg:flex-row bg-light-gray">
+
+      <div class="content-container-right">
+        <div class="vertical-divider ml-[100px]"></div>
+        <div class="inner-container-right lg:mr-0!">
+          <h2>
+            <span class="font-sinkin-sans-regular">About</span>
+            <span class="font-sinkin-sans-bold">Us</span>
+          </h2>
+          <p class="mt-5">
+            <span>In 2017 Blake Charles McCall took over Joseph Cozza Salon. In December of 2019 Blake acquired the
+              Granite Bay location.</span>
+            <span class="mt-[19px]">January 1, 2021 the San Francisco salon was rebranded to Blake Charles Salon. This
+              concluded 25 years of Joseph Cozza Salon. As a leading San Francisco and Granite Bay salon that’s
+              synonymous with luxury hair care, Blake Charles Salon offers a wide range of salon services in San
+              Francisco and Granite Bay. We specialize in luxury hair care and have an outstanding reputation for our
+              high standard of excellence and personalized attention we give to each client we serve. We know that
+              everyone is unique with their own needs, desires and sense of style, which is why we offer a very
+              diversified range of salon services to meet your needs.</span>
+          </p>
+          <div class="btn bg-skin-btn">
+            <a href="#">OUR TEAM</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="img-container" class="left-img-container">
+        <div class="absolute inset-0 img-gradiant-left"></div>
+        <img src="./assets/images/about-us.jpg" alt="Salon">
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section>
+    <div class="experience relative bg-[url('./assets/images/experience.jpg')] bg-cover bg-left">
+      <div class="absolute inset-0 bg-[rgba(0,0,0,0.8)]"></div>
+      <div class="experience-main">
+        <h2>
+          <span class="font-sinkin-sans-bold">The Blake Charles</span>
+          <span class="font-sinkin-sans-regular block"><strong>Salon</strong> Experience</span>
+        </h2>
+        <p class="leading-[19px] mt-5">As a leading San Francisco salon that’s synonymous with luxury hair care,
+          Blake Charles Salon offers a wide range of salon services in San Francisco. We specialize in luxury hair care
+          and have an outstanding reputation for our high standard of excellence and personalized attention we give to
+          each client we serve. We know that everyone is unique with their own needs, desires and sense of style, which
+          is why we offer a very diversified range of salon services to meet your needs.</p>
+        <div class="btn bg-skin-btn justify-self-center">
+          <a href="#">CONTACT US, TODAY!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured In -->
+  <section>
+    <div class="featured-in container-md bg-black text-center pt-[55px] overflow-hidden">
+        <h3>Featured In</h3>
+        <div class="py-10 marquee flex gap-[29.86px]">
+          <img src="./assets/images/f-1.png" alt="Featured In" class="img-1">
+          <img src="./assets/images/f-2.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-3.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-4.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-5.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-6.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-1.png" alt="Featured In" class="img-1">
+          <img src="./assets/images/f-2.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-3.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-4.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-5.png" alt="Featured In" class="h-max">
+          <img src="./assets/images/f-6.png" alt="Featured In" class="h-max">
+        </div>
+      </div>
   </section>
 
   <!-- Scripts -->

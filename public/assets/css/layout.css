@@ -1,3 +1,16 @@
+/* 
+--breakpoint-2xs: 320px;
+  --breakpoint-xs: 375px;
+  --breakpoint-500: 500px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-big: 1400px;
+  --breakpoint-2xl: 1536px;
+ */
+
+
 /* .header1{
   @apply fixed bg-black flex container-md py-3.5 items-center justify-between w-full;
 } */
@@ -11,3 +24,17 @@
   @apply bg-black;
 }
 
+/* image and text container */
+.content-container-right{
+  @apply flex gap-10 2xs:gap-0 lg:gap-10 items-center my-20 2xs:my-[30px] 500:my-[60px] md:my-20;
+}
+.inner-container-right{
+  @apply mr-[100px] py-5 2xs:mx-[30px] lg:ml-0 lg:mr-[100px] 2xs:py-0 lg:py-5;
+}
+
+.experience-main{
+  @apply relative inset-0 text-center px-64 py-20 2xs:px-[30px] 500:px-[60px] md:px-20 lg:px-32 xl:px-64 2xs:py-[30px] 500:py-[50px] md:py-20;
+}
+.featured-in .img-1 {
+  @apply h-fit self-center;
+}
