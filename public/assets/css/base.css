@@ -20,6 +20,9 @@
   h3{
     @apply uppercase text-[24px] leading-[34px] text-white font-sinkin-sans-bold;
   }
+  h4{
+    @apply uppercase text-[20px] text-white font-sinkin-sans-bold leading-[30px];
+  }
   p {
     @apply font-inter text-dark-gray text-base leading-[19px];
   }
@@ -78,5 +81,8 @@
   }
   p span {
     @apply block;
+  }
+  #img-container-careers {
+    @apply relative max-w-[756px] min-h-[550px] 2xs:min-h-0 2xs:max-w-fit lg:w-7/3 xl:max-w-[756px] xl:min-h-[550px];
   }
 }

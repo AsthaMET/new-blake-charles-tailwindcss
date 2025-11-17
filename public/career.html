@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Announcement-bar -->
+    <div id="Announcement-bar"
+        class="container-md fixed top-0 left-0 w-full z-50 flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 gap-3 sm:gap-0">
+        <div>
+            <span class="font-inter font-normal block">This is the first example of a sitewide notice.</span>
+        </div>
+        <div
+            class="announcement-btn 2xs:hidden min-[1200px]:flex flex gap-5 h-auto 2xs:flex-col sm:flex-row 2xs:mt-3 sm:mt-0 2xs:w-full sm:w-fit">
+            <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin!">
+                <a href="#">Book now</a>
+            </div>
+            <div class="btn black-border-btn">
+                <a href="#">Find A Stylist</a>
+            </div>
+            <div class="btn black-border-btn">
+                <a href="#">Gift</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav
+            class="container-md 2xs:top-[67px] min-[391px]:top-[51px] min-[1200px]:top-[67px] flex justify-between fixed w-full z-50  items-center py-5">
+            <a href="#"><img src="./assets/images/logo.png" /></a>
+
+            <div class="hidden min-[1200px]:flex gap-6 items-center">
+                <a href="#">SF Luxury Services</a>
+                <a href="#">Granite Bay Luxury Services</a>
+                <a href="#">Spa Amenities</a>
+                <a href="index.html">Blake Charles Experience</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <a href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_21878_36)">
+                        <path
+                            d="M19.2892 15.7606L15.9975 12.4688C16.596 11.2718 16.995 9.87531 16.995 8.4788C16.995 3.79052 13.2044 0 8.51616 0C3.82788 0 0.0373535 3.79052 0.0373535 8.4788C0.0373535 13.1671 3.82788 16.9576 8.51616 16.9576C9.91266 16.9576 11.3092 16.5586 12.5062 15.9601L15.798 19.2519C16.7955 20.2494 18.2917 20.2494 19.2892 19.2519C20.187 18.2544 20.187 16.7581 19.2892 15.7606ZM8.51616 14.9626C4.92513 14.9626 2.03237 12.0698 2.03237 8.4788C2.03237 4.88778 4.92513 1.99501 8.51616 1.99501C12.1072 1.99501 14.9999 4.88778 14.9999 8.4788C14.9999 12.0698 12.1072 14.9626 8.51616 14.9626Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_21878_36">
+                            <rect width="20" height="20" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+
+            <button id="menuButton"
+                class="py-3 px-4 mx-2 rounded focus:outline-none cursor-pointer min-[1200px]:hidden">
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="" aria-hidden="true"
+                    focusable="false">
+                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+
+                <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="hidden"
+                    aria-hidden="true" focusable="false">
+                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
+                </svg>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu">
+                    <ul class="flex flex-col items-center text-base py-7">
+                        <li><a href="#">SF Luxury Services</a></li>
+                        <li><a href="#">Granite Bay Luxury Services</a></li>
+                        <li><a href="#">Spa Amenities</a></li>
+                        <li><a href="#">Blake Charles Experience</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <div class="announcement-btn h-auto w-[90%] flex-col">
+                            <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin! min-w-full my-4">
+                                <a href="#">Book now</a>
+                            </div>
+                            <div class="btn black-border-btn min-w-full my-4">
+                                <a href="#">Find A Stylist</a>
+                            </div>
+                            <div class="btn black-border-btn min-w-full my-4">
+                                <a href="#">Gift</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <div class="h-screen w-full gradiant z-50">
+        <div class="relative inset-0 -z-10">
+            <img src="./assets/images/career-hero.jpg" alt="hero img 1" class="h-screen w-screen object-cover" />
+        </div>
+        <div class="hero-text absolute top-[59%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[inherit] px-2.5">
+            <h1 class="font-sinkin-sans-bold">Careers</h1>
+        </div>
+    </div>
+
+    <!-- Join Our Team -->
+    <section>
+        <div class="relative flex 2xs:flex-col lg:flex-row">
+            <div id="img-container-careers">
+                <img src="./assets/images/join-team.png" alt="Salon" class="h-full!">
+                <div class="absolute top-[45%] left-[48%]"><svg width="44" height="48" viewBox="0 0 44 48" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M41.9759 21.9072L3.57599 0.307291C2.83199 -0.110308 1.92479 -0.100708 1.1904 0.326491C0.451199 0.75849 0 1.54569 0 2.40008V45.6C0 46.4543 0.451199 47.2416 1.1904 47.6735C1.5648 47.8895 1.98239 47.9999 2.39999 47.9999C2.80319 47.9999 3.21119 47.8991 3.57599 47.6927L41.9759 26.0928C42.7295 25.6656 43.1999 24.8688 43.1999 24C43.1999 23.1312 42.7295 22.3344 41.9759 21.9072Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="absolute inset-0 img-gradiant-right"></div>
+            </div>
+
+            <div class="content-container-right-career">
+                <div class="vertical-divider"></div>
+                <div class="inner-container-right">
+                    <h2>
+                        <span class="font-sinkin-sans-regular">Join</span>
+                        <span class="font-sinkin-sans-bold">Our team</span>
+                    </h2>
+                    <p class="mt-5">
+                        We are always looking for talented individuals with a great attitude and strong work ethic.
+                        Whether you’re an experienced professional or fresh out of school we are looking for people to
+                        want to work at San Francisco’s best salon and spa. Our staff always talks about being one big
+                        family and how much they love working for Blake Charles Salon. If you’re looking to work in a
+                        fun and friendly environment fill out the application and attach your resume.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERKS & BENEFITS -->
+    <section>
+        <div class="experience relative bg-[url('./assets/images/experience.jpg')] bg-cover bg-left">
+            <div class="absolute inset-0 bg-[rgba(0,0,0,0.8)]"></div>
+            <div class="relative inset-0 p-20">
+                <h2 class="justify-self-center">
+                    <span class="font-sinkin-sans-bold">PERKS & BENEFITS</span>
+                </h2>
+                <!-- line 1 -->
+                <div class="grid grid-cols-3 grid-rows-3 gap-x-5 gap-y-[55px] mt-[55px] 2xs:grid-cols-1 md:grid-cols-3">
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-1.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Competitive Pay</h3>
+                    </div>
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-2.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Product
+                            Discounts</h3>
+                    </div>
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-3.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Service
+                            Discounts</h3>
+                    </div>
+
+                    <!-- line 2 -->
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-4.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Hands-on
+                            Training</h3>
+                    </div>
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-5.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[315px]">Access To
+                            Industry Experts</h3>
+                    </div>
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-6.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[282px]">401k Retirement
+                            Savings Plan</h3>
+                    </div>
+
+                    <!-- line 3 -->
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-7.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[394px]">Professional Growth Opportunities
+                        </h3>
+                    </div>
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-8.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[320px]">
+                            <strong class="block">Medical, Dental,</strong>
+                            <strong class="block">& Vision Insurance</strong>
+                        </h3>
+                    </div>
+                    <div class="w-fit justify-items-center justify-self-center">
+                        <img src="./assets/images/pb-9.png" alt="career">
+                        <h3 class="text-white w-fit text-center mt-7 max-w-[381px]">Continuing Education
+                            By Industry Experts</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Opportunities -->
+    <section>
+        <div class="p-20">
+            <div class="justify-self-center">
+                <h2 class="text-center">
+                    <span class="font-sinkin-sans-regular">job</span>
+                    <span class="font-sinkin-sans-bold">Opportunities</span>
+                </h2>
+                <p class="text-dark-gray mt-5">We are growing and constantly looking for talented individuals to join
+                    our award winning team.</p>
+            </div>
+            <div class="grid grid-cols-3 gap-[55px] mt-[55px]">
+                <div class="relative hover:cursor-pointer">
+                    <img src="./assets/images/jo-1.png" alt="job Opportunities" class="justify-self-center">
+                    <div class="justify-self-center text-center">
+                        <h4 class="text-black! mt-3.5">Hair Stylists</h4>
+                        <p class="text-dark-gray mt-3.5">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus
+                            lorem
+                            dignissim. Integer convallis a venenatis.</p>
+                        <a href="#"
+                            class="uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center after:absolute after:inset-0 after:w-full after:h-full transition">Learn
+                            More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                    fill="black" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/images/jo-2.png" alt="job Opportunities" class="justify-self-center">
+                    <div class="justify-self-center text-center">
+                        <h4 class="text-black! mt-3.5">Apprenticeship Program</h4>
+                        <p class="text-dark-gray mt-3.5">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus lorem
+                            dignissim. Integer convallis a venenatis.</p>
+                        <span
+                            class="uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center">Learn
+                            More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/images/jo-3.png" alt="job Opportunities" class="justify-self-center">
+                    <div class="justify-self-center text-center">
+                        <h4 class="text-black! mt-3.5">Makeup Artist</h4>
+                        <p class="text-dark-gray mt-3.5">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus lorem
+                            dignissim. Integer convallis a venenatis.</p>
+                        <span
+                            class="uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center">Learn
+                            More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

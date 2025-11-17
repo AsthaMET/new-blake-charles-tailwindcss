@@ -31,10 +31,36 @@
 .inner-container-right{
   @apply mr-[100px] py-5 2xs:mx-[30px] lg:ml-0 lg:mr-[100px] 2xs:py-0 lg:py-5;
 }
-
+.content-container-right-career{
+  @apply flex gap-10 2xs:gap-0 lg:gap-10 items-center my-20 2xs:my-[30px] 500:my-[60px] md:my-[110px] lg:my-[159px];
+}
 .experience-main{
   @apply relative inset-0 text-center px-64 py-20 2xs:px-[30px] 500:px-[60px] md:px-20 lg:px-32 xl:px-64 2xs:py-[30px] 500:py-[50px] md:py-20;
 }
 .featured-in .img-1 {
   @apply h-fit self-center;
+}
+
+.horizontal-divider{
+  @apply bg-gray h-[3px];
+}
+footer .main{
+  @apply flex pt-10 justify-between pb-[55px] gap-5 max-[1150px]:flex-wrap;
+}
+footer a{
+  @apply text-skin hover:underline;
+}
+
+.footer-heading a{
+  @apply text-[24px] text-skin font-inter font-bold;
+}
+
+.footer-experiance a{
+  @apply text-skin font-inter font-normal block leading-[19px] mt-2.5;
+}
+footer .icons div{
+  @apply bg-skin rounded-full w-fit h-fit py-2 hover:bg-gray;
+}
+footer span{
+  @apply text-white font-bold font-inter leading-[19px];
 }
