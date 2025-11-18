@@ -11,12 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
     <!-- Announcement-bar -->
-    <div id="Announcement-bar"
-        class="container-md fixed top-0 left-0 w-full z-50 flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 gap-3 sm:gap-0">
+    <div id="announcement-bar"
+        class="container-md static top-0 left-0 w-full z-50 flex flex-col sm:flex-row items-center justify-between px-5 py-3.5 gap-3 sm:gap-0">
         <div>
             <span class="font-inter font-normal block">This is the first example of a sitewide notice.</span>
         </div>
@@ -35,10 +36,9 @@
     </div>
 
     <!-- Header -->
-    <header>
-        <nav
-            class="container-md 2xs:top-[67px] min-[391px]:top-[51px] min-[1200px]:top-[67px] flex justify-between fixed w-full z-50  items-center py-5">
-            <a href="#"><img src="./assets/images/logo.png" /></a>
+    <header class="header">
+        <nav class="container-md flex justify-between fixed w-full z-50  items-center py-5">
+            <a href="index.html"><img src="./assets/images/logo.png" /></a>
 
             <div class="hidden min-[1200px]:flex gap-6 items-center">
                 <a href="#">SF Luxury Services</a>
@@ -63,9 +63,8 @@
                 </svg>
             </a>
 
-            <button id="menuButton"
-                class="py-3 px-4 mx-2 rounded focus:outline-none cursor-pointer min-[1200px]:hidden">
-                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="" aria-hidden="true"
+            <button id="menuButton" class="rounded focus:outline-none cursor-pointer min-[1200px]:hidden">
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
                     focusable="false">
                     <path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
                 </svg>
@@ -81,7 +80,7 @@
                         <li><a href="#">SF Luxury Services</a></li>
                         <li><a href="#">Granite Bay Luxury Services</a></li>
                         <li><a href="#">Spa Amenities</a></li>
-                        <li><a href="#">Blake Charles Experience</a></li>
+                        <li><a href="index.html">Blake Charles Experience</a></li>
                         <li><a href="#">Contact</a></li>
                         <div class="announcement-btn h-auto w-[90%] flex-col">
                             <div class="bg-skin btn text-black! hover:bg-transparent! hover:text-skin! min-w-full my-4">
@@ -101,18 +100,20 @@
     </header>
 
     <!-- Hero section -->
-    <div class="h-screen w-full gradiant z-50">
-        <div class="relative inset-0 -z-10">
-            <img src="./assets/images/career-hero.jpg" alt="hero img 1" class="h-screen w-screen object-cover" />
-        </div>
-        <div class="hero-text absolute top-[59%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[inherit] px-2.5">
-            <h1 class="font-sinkin-sans-bold">Careers</h1>
+    <div class="hero-section">
+        <div class="h-screen w-full hero-gradiant z-50">
+            <div class="relative inset-0 -z-10">
+                <img src="./assets/images/career-hero.jpg" alt="hero img 1" class="h-screen w-screen object-cover" />
+            </div>
+            <div class="hero-text absolute top-[59%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[inherit] px-6">
+                <h1 class="font-sinkin-sans-bold">Careers</h1>
+            </div>
         </div>
     </div>
 
     <!-- Join Our Team -->
-    <section>
-        <div class="relative flex 2xs:flex-col lg:flex-row">
+    <section class="join-our-team-section">
+        <div class="relative flex 2xs:flex-col-reverse lg:flex-row">
             <div id="img-container-careers">
                 <img src="./assets/images/join-team.png" alt="Salon" class="h-full!">
                 <div class="absolute top-[45%] left-[48%]"><svg width="44" height="48" viewBox="0 0 44 48" fill="none"
@@ -145,64 +146,140 @@
     </section>
 
     <!-- PERKS & BENEFITS -->
-    <section>
-        <div class="experience relative bg-[url('./assets/images/experience.jpg')] bg-cover bg-left">
+    <section class="perks-and-benefits-section">
+        <div class="hidden lg:block experience relative bg-[url('./assets/images/experience.jpg')] bg-cover bg-left">
             <div class="absolute inset-0 bg-[rgba(0,0,0,0.8)]"></div>
-            <div class="relative inset-0 p-20">
+            <div class="relative inset-0 2xs:p-6 500:p-8 md:p-11 lg:p-20">
                 <h2 class="justify-self-center">
                     <span class="font-sinkin-sans-bold">PERKS & BENEFITS</span>
                 </h2>
                 <!-- line 1 -->
                 <div class="grid grid-cols-3 grid-rows-3 gap-x-5 gap-y-[55px] mt-[55px] 2xs:grid-cols-1 md:grid-cols-3">
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-1.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Competitive Pay</h3>
+                        <h3 class="headeing">Competitive Pay</h3>
                     </div>
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-2.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Product
+                        <h3 class="headeing">Product
                             Discounts</h3>
                     </div>
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-3.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Service
+                        <h3 class="headeing">Service
                             Discounts</h3>
                     </div>
 
                     <!-- line 2 -->
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-4.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[210px]">Hands-on
+                        <h3 class="headeing">Hands-on
                             Training</h3>
                     </div>
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-5.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[315px]">Access To
+                        <h3 class="headeing">Access To
                             Industry Experts</h3>
                     </div>
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-6.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[282px]">401k Retirement
+                        <h3 class="headeing">401k Retirement
                             Savings Plan</h3>
                     </div>
 
                     <!-- line 3 -->
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-7.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[394px]">Professional Growth Opportunities
+                        <h3 class="headeing">Professional Growth Opportunities
                         </h3>
                     </div>
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-8.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[320px]">
+                        <h3 class="headeing">
                             <strong class="block">Medical, Dental,</strong>
                             <strong class="block">& Vision Insurance</strong>
                         </h3>
                     </div>
-                    <div class="w-fit justify-items-center justify-self-center">
+                    <div class="card">
                         <img src="./assets/images/pb-9.png" alt="career">
-                        <h3 class="text-white w-fit text-center mt-7 max-w-[381px]">Continuing Education
+                        <h3 class="headeing">Continuing Education
                             By Industry Experts</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="lg:hidden experience relative bg-[url('./assets/images/experience.jpg')] bg-cover bg-left py-10">
+            <div class="absolute inset-0 bg-[rgba(0,0,0,0.8)]"></div>
+            <h2 class="justify-self-center relative">
+                <span class="font-sinkin-sans-bold">PERKS & BENEFITS</span>
+            </h2>
+            <div class="swiper mySwiper mt-[50px]">
+                <div class="swiper-wrapper grid grid-cols-3">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-1.png" alt="career">
+                            <h3 class="headeing">Competitive Pay</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-2.png" alt="career">
+                            <h3 class="headeing">Product
+                                Discounts</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-3.png" alt="career">
+                            <h3 class="headeing">Service
+                                Discounts</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-4.png" alt="career">
+                            <h3 class="headeing">Hands-on
+                                Training</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-5.png" alt="career">
+                            <h3 class="headeing">Access To
+                                Industry Experts</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-6.png" alt="career">
+                            <h3 class="headeing">401k Retirement
+                                Savings Plan</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-7.png" alt="career">
+                            <h3 class="headeing">Professional Growth
+                                Opportunities
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-8.png" alt="career">
+                            <h3 class="headeing">
+                                <strong class="block">Medical, Dental,</strong>
+                                <strong class="block">& Vision Insurance</strong>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./assets/images/pb-9.png" alt="career">
+                            <h3 class="headeing">Continuing Education
+                                By Industry Experts</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,8 +287,8 @@
     </section>
 
     <!-- Job Opportunities -->
-    <section>
-        <div class="p-20">
+    <section class="job-opportunities-section">
+        <div class="p-20 2xs:px-5 py-8 min-[1200px]:p-20">
             <div class="justify-self-center">
                 <h2 class="text-center">
                     <span class="font-sinkin-sans-regular">job</span>
@@ -220,65 +297,363 @@
                 <p class="text-dark-gray mt-5">We are growing and constantly looking for talented individuals to join
                     our award winning team.</p>
             </div>
-            <div class="grid grid-cols-3 gap-[55px] mt-[55px]">
-                <div class="relative hover:cursor-pointer">
-                    <img src="./assets/images/jo-1.png" alt="job Opportunities" class="justify-self-center">
-                    <div class="justify-self-center text-center">
-                        <h4 class="text-black! mt-3.5">Hair Stylists</h4>
-                        <p class="text-dark-gray mt-3.5">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus
-                            lorem
-                            dignissim. Integer convallis a venenatis.</p>
-                        <a href="#"
-                            class="uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center after:absolute after:inset-0 after:w-full after:h-full transition">Learn
-                            More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
-                                    fill="black" />
-                            </svg>
-                        </a>
+            <!-- lg screen -->
+            <div class="hidden min-[1200px]:block">
+                <div class="grid grid-cols-3 gap-[55px] mt-[55px]">
+                    <div class="card-hover">
+                        <img src="./assets/images/jo-1.png" alt="job Opportunities" class="justify-self-center">
+                        <div class="container">
+                            <h4 class="heading">Hair Stylists</h4>
+                            <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus
+                                lorem
+                                dignissim. Integer convallis a venenatis.</p>
+                            <a href="#" class="a">Learn
+                                More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-hover">
+                        <img src="./assets/images/jo-2.png" alt="job Opportunities" class="justify-self-center">
+                        <div class="container">
+                            <h4 class="heading">Apprenticeship Program</h4>
+                            <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus
+                                lorem
+                                dignissim. Integer convallis a venenatis.</p>
+                            <a href="#" class="a">Learn
+                                More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-hover">
+                        <img src="./assets/images/jo-3.png" alt="job Opportunities" class="justify-self-center">
+                        <div class="container">
+                            <h4 class="heading">Makeup Artist</h4>
+                            <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus
+                                lorem
+                                dignissim. Integer convallis a venenatis.</p>
+                            <a href="#" class="a">Learn
+                                More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <img src="./assets/images/jo-2.png" alt="job Opportunities" class="justify-self-center">
-                    <div class="justify-self-center text-center">
-                        <h4 class="text-black! mt-3.5">Apprenticeship Program</h4>
-                        <p class="text-dark-gray mt-3.5">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus lorem
-                            dignissim. Integer convallis a venenatis.</p>
-                        <span
-                            class="uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center">Learn
-                            More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
+            </div>
+            <!-- swiper -->
+            <div class="swiper mySwiper min-[1200px]:hidden! 2xs:mt-8">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card-hover">
+                            <img src="./assets/images/jo-1.png" alt="job Opportunities" class="justify-self-center">
+                            <div class="container">
+                                <h4 class="heading">Hair Stylists</h4>
+                                <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at
+                                    faucibus
+                                    lorem
+                                    dignissim. Integer convallis a venenatis.</p>
+                                <a href="#"
+                                    class="a after:absolute after:inset-0 after:w-full after:h-full transition">Learn
+                                    More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <img src="./assets/images/jo-3.png" alt="job Opportunities" class="justify-self-center">
-                    <div class="justify-self-center text-center">
-                        <h4 class="text-black! mt-3.5">Makeup Artist</h4>
-                        <p class="text-dark-gray mt-3.5">Lorem ipsum dolor sit amet consectetur. Lacus at faucibus lorem
-                            dignissim. Integer convallis a venenatis.</p>
-                        <span
-                            class="uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center">Learn
-                            More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
-                                    fill="black" />
-                            </svg>
-                        </span>
+                    <div class="swiper-slide">
+                        <div class="card-hover">
+                            <img src="./assets/images/jo-2.png" alt="job Opportunities" class="justify-self-center">
+                            <div class="container">
+                                <h4 class="heading">Apprenticeship Program</h4>
+                                <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at
+                                    faucibus lorem
+                                    dignissim. Integer convallis a venenatis.</p>
+                                <a href="#" class="a">Learn
+                                    More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-hover">
+                            <img src="./assets/images/jo-3.png" alt="job Opportunities" class="justify-self-center">
+                            <div class="container">
+                                <h4 class="heading">Makeup Artist</h4>
+                                <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at
+                                    faucibus lorem
+                                    dignissim. Integer convallis a venenatis.</p>
+                                <a href="#" class="a">Learn
+                                    More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-hover">
+                            <img src="./assets/images/jo-1.png" alt="job Opportunities" class="justify-self-center">
+                            <div class="container">
+                                <h4 class="heading">Hair Stylists</h4>
+                                <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at
+                                    faucibus
+                                    lorem
+                                    dignissim. Integer convallis a venenatis.</p>
+                                <a href="#" class="a">Learn
+                                    More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-hover">
+                            <img src="./assets/images/jo-2.png" alt="job Opportunities" class="justify-self-center">
+                            <div class="container">
+                                <h4 class="heading">Apprenticeship Program</h4>
+                                <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at
+                                    faucibus lorem
+                                    dignissim. Integer convallis a venenatis.</p>
+                                <a href="#" class="a">Learn
+                                    More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-hover">
+                            <img src="./assets/images/jo-3.png" alt="job Opportunities" class="justify-self-center">
+                            <div class="container">
+                                <h4 class="heading">Makeup Artist</h4>
+                                <p class="p">Lorem ipsum dolor sit amet consectetur. Lacus at
+                                    faucibus lorem
+                                    dignissim. Integer convallis a venenatis.</p>
+                                <a href="#" class="a">Learn
+                                    More <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.7061 16.0816C12.1837 16.6041 11.3429 16.6041 10.8204 16.0816C10.5592 15.8204 10.4286 15.4816 10.4286 15.1388C10.4286 14.7959 10.5592 14.4571 10.8204 14.1959L15.449 9.57143L1.33469 9.57143C0.6 9.57143 -3.92332e-07 8.97551 -3.60039e-07 8.23673C-3.27746e-07 7.49796 0.595918 6.90204 1.33469 6.90204L15.449 6.90204L10.8204 2.27755C10.298 1.7551 10.298 0.914285 10.8204 0.391836C11.3429 -0.130613 12.1837 -0.130613 12.7061 0.391836L19.6082 7.29388C19.8612 7.54286 20 7.88163 20 8.23673C20 8.59184 19.8612 8.93061 19.6082 9.17959L12.7061 16.0816Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Featured In -->
+    <section class="featured-in-section">
+        <div class="featured-in container-md bg-black text-center pt-[55px] overflow-hidden">
+            <h3>Featured In</h3>
+            <div class="py-10 marquee flex gap-[29.86px]">
+                <img src="./assets/images/f-1.png" alt="Featured In" class="img-1">
+                <img src="./assets/images/f-2.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-3.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-4.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-5.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-6.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-1.png" alt="Featured In" class="img-1">
+                <img src="./assets/images/f-2.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-3.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-4.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-5.png" alt="Featured In" class="h-max">
+                <img src="./assets/images/f-6.png" alt="Featured In" class="h-max">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-md bg-black">
+            <div class="horizontal-divider"></div>
+            <div class="main">
+                <!-- part 1 -->
+                <div class="footer-heading">
+                    <h3>Follow Us on Instagram</h3>
+                    <a href="#">@blakecharlessalon</a>
+                    <img src="./assets/images/footer-img.png" alt="footer image"
+                        class="mt-10 2xs:w-full min-[1150px]:w-fit">
+                </div>
+                <!-- part 2 -->
+                <div>
+                    <div class="footer-experiance">
+                        <h4>Blake Charles Experience</h4>
+                        <div class="mt-3.5 w-fit">
+                            <a href="#">Private Events</a>
+                            <a href="career.html">Careers</a>
+                            <a href="#">Model Days</a>
+                            <a href="#">ManeMatch</a>
+                            <a href="#">MedSpa Partner</a>
+                        </div>
+                    </div>
+                    <div class="footer-experiance mt-10">
+                        <h4>Learn More</h4>
+                        <div class="mt-3.5 w-fit">
+                            <a href="#">Latest News</a>
+                            <a href="#">Cancellation Policy</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- part 3 -->
+                <div>
+                    <div>
+                        <a href="#"><img src="./assets/images/logo.png" alt="footer logo"
+                                class="w-full 2xs:w-fit min-[1150px]:w-full">
+                        </a>
+                    </div>
+                    <div
+                        class="icons grid grid-cols-7 gap-5 mt-[142px] 2xs:mt-[30px] min-[1150px]:mt-[142px] w-fit 2xs:grid-cols-4 xs:grid-cols-5 500:grid-cols-7">
+                        <div class="p-2">
+                            <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_21964_192" style="mask-type:luminance" maskUnits="userSpaceOnUse"
+                                        x="-1" y="0" width="25" height="24">
+                                        <path
+                                            d="M20.7608 4.78559C20.5489 4.24155 20.2961 3.85198 19.8887 3.44464C19.48 3.03593 19.0918 2.78305 18.5464 2.57254C18.135 2.41261 17.5171 2.22261 16.3798 2.17067C15.1496 2.11463 14.7805 2.10232 11.6653 2.10232C8.55011 2.10232 8.18104 2.11463 6.95082 2.17067C5.81354 2.22261 5.19569 2.41261 4.78425 2.57254C4.24021 2.78442 3.85064 3.0373 3.4433 3.44464C3.03459 3.85335 2.78171 4.24155 2.5712 4.78559C2.41127 5.19703 2.22127 5.81488 2.16933 6.95216C2.11328 8.18239 2.10098 8.55146 2.10098 11.6667C2.10098 14.7819 2.11328 15.1509 2.16933 16.3812C2.22127 17.5185 2.41127 18.1363 2.5712 18.5477C2.78307 19.0918 3.03595 19.4814 3.4433 19.8887C3.85201 20.2974 4.24021 20.5489 4.78425 20.7608C5.19569 20.9207 5.81354 21.1107 6.95082 21.1627C8.18104 21.2187 8.55011 21.231 11.6653 21.231C14.7805 21.231 15.1496 21.2187 16.3798 21.1627C17.5171 21.1107 18.135 20.9207 18.5464 20.7608C19.0918 20.5489 19.48 20.296 19.8887 19.8887C20.2961 19.48 20.5489 19.0918 20.7608 18.5477C20.9207 18.1363 21.1107 17.5185 21.1627 16.3812C21.2187 15.1509 21.231 14.7819 21.231 11.6667C21.231 8.55146 21.2187 8.18239 21.1627 6.95216C21.1107 5.81488 20.9207 5.19703 20.7608 4.78559ZM11.6667 17.6579C8.35738 17.6579 5.67548 14.976 5.67548 11.6667C5.67548 8.35735 8.35738 5.67545 11.6667 5.67545C14.976 5.67545 17.6579 8.35735 17.6579 11.6667C17.6579 14.976 14.976 17.6579 11.6667 17.6579ZM17.8944 6.8387C17.1207 6.8387 16.4947 6.21129 16.4947 5.43898C16.4947 4.66667 17.1221 4.03925 17.8944 4.03925C18.6667 4.03925 19.2941 4.6653 19.2941 5.43898C19.2941 6.21265 18.6667 6.8387 17.8944 6.8387ZM11.6667 7.77778C9.51926 7.77778 7.7778 9.51923 7.7778 11.6667C7.7778 13.8141 9.51926 15.5556 11.6667 15.5556C13.8141 15.5556 15.5556 13.8141 15.5556 11.6667C15.5556 9.51923 13.8141 7.77778 11.6667 7.77778ZM23.2636 16.4769C23.2062 17.718 23.0094 18.5669 22.721 19.3091C22.423 20.076 22.0238 20.7266 21.3746 21.3759C20.7253 22.0238 20.076 22.423 19.3078 22.721C18.5655 23.0094 17.7181 23.2062 16.4755 23.2636C15.2316 23.3197 14.8338 23.3333 11.6653 23.3333C8.4968 23.3333 8.1004 23.3197 6.85513 23.2636C5.61397 23.2062 4.76511 23.0094 4.02287 22.721C3.25603 22.423 2.60538 22.0238 1.95609 21.3759C1.3068 20.7266 0.909026 20.076 0.611038 19.3091C0.322617 18.5669 0.125781 17.7194 0.0683702 16.4769C0.0123264 15.233 -0.00134277 14.8352 -0.00134277 11.6667C-0.00134277 8.49815 0.0123264 8.10037 0.0683702 6.85647C0.124414 5.61531 0.322617 4.76645 0.611038 4.02421C0.909026 3.25737 1.30817 2.60672 1.95609 1.95743C2.60538 1.30951 3.25466 0.910369 4.02287 0.61238C4.76511 0.32396 5.6126 0.127124 6.85513 0.069713C8.09903 0.0123023 8.4968 0 11.6653 0C14.8338 0 15.2316 0.0136692 16.4755 0.069713C17.7167 0.125757 18.5655 0.32396 19.3078 0.61238C20.0746 0.910369 20.7253 1.30951 21.3746 1.95743C22.0225 2.60672 22.4216 3.25737 22.721 4.02421C23.0094 4.76645 23.2062 5.61394 23.2636 6.85647C23.3211 8.10037 23.3334 8.49815 23.3334 11.6667C23.3334 14.8352 23.3197 15.233 23.2636 16.4769Z"
+                                            fill="white" />
+                                    </mask>
+                                    <g mask="url(#mask0_21964_192)">
+                                        <rect x="-0.307495" y="-0.332275" width="23.9211" height="23.9211"
+                                            fill="black" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="px-[13.5px]">
+                            <a href="#"><svg width="13" height="24" viewBox="0 0 13 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.1571 13.4876L12.7261 9.07856H8.35952V6.26327C8.35952 4.98655 8.71621 4.11748 10.5464 4.11748H12.879V0.174098C12.477 0.120311 11.0913 0 9.47771 0C6.1104 0 3.8075 2.0552 3.8075 5.82873V9.07997H0V13.489H3.8075V23.3333H8.35952V13.489H12.1571V13.4876Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="px-[9.5px]">
+                            <a href="#"><svg width="21" height="24" viewBox="0 0 21 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.3836 4.74503C16.0631 3.92235 15.1121 2.56285 14.8333 0.971874C14.8068 0.819888 14.7859 0.666507 14.7719 0.513127V0H10.7534V15.9516C10.7464 17.8116 9.23629 19.3162 7.37481 19.3162C6.82821 19.3162 6.3123 19.1865 5.85495 18.9564C4.752 18.4001 3.99626 17.2581 3.99626 15.9404C3.99626 14.0761 5.50914 12.5632 7.37481 12.5632C7.73176 12.5632 8.07757 12.619 8.40106 12.7208V8.6381C8.06502 8.59209 7.72619 8.56838 7.38735 8.56838C3.30744 8.56978 0 11.8758 0 15.9516C0 18.5074 1.29955 20.7593 3.27397 22.084C4.44942 22.8732 5.86471 23.3319 7.38596 23.3319C11.4645 23.3319 14.7719 20.0273 14.7719 15.9502V7.80009C16.342 8.92116 18.2648 9.58069 20.341 9.58069V5.58723C19.2952 5.58862 18.2718 5.2958 17.3836 4.74364V4.74503Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="py-2.5! px-[9.5px]">
+                            <a href="#"><svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_21964_207)">
+                                        <path
+                                            d="M12.3707 8.41369L19.4799 0H16.8778L11.1656 6.76093L6.22733 0H0L8.10842 10.9783L0.485136 20H3.08918L9.32501 12.622L14.7749 20H20.8349L12.3707 8.41369ZM2.77142 1.39146H5.51087L18.0065 18.4981H15.4089L2.77142 1.39146Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_21964_207">
+                                            <rect width="20.8349" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="py-[7.5px]! px-[10.5px]">
+                            <a href="#"><svg width="19" height="25" viewBox="0 0 19 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_21964_211)">
+                                        <path
+                                            d="M3.1246 1.13898C4.38534 0.147723 6.80946 -0.136211 7.80699 0.0572659C8.80516 0.249487 9.32654 0.807932 9.33283 1.48761L9.39062 10.157C9.39501 10.838 9.04135 11.4636 8.60415 11.5478C8.16505 11.6301 7.51804 11.2255 7.16249 10.6464L2.61389 3.21258C2.26086 2.63277 1.54977 2.37711 3.12397 1.13835L3.1246 1.13898ZM1.61447 17.6241L6.19385 16.0034C6.83207 15.7766 7.40371 15.1472 7.46778 14.6001C7.52997 14.0529 7.06575 13.404 6.43695 13.1547L1.5994 11.2362C0.969339 10.9875 0.243172 11.5773 0.0515796 12.5434C0.0515796 12.5434 -0.0633759 15.9067 0.0515796 16.6033C0.167792 17.2987 0.976249 17.8509 1.6151 17.6235L1.61447 17.6241ZM9.60231 18.4338C9.6155 17.751 9.25116 17.1618 8.79197 17.1203C8.33278 17.0776 7.6041 17.4696 7.16877 17.9891L3.97452 21.8197C3.53982 22.3404 3.75591 23.5628 4.38974 23.7946L7.72973 24.9549C8.36544 25.186 9.48547 24.5013 9.49866 23.821L9.60231 18.4344V18.4338ZM17.543 17.5418L13.5372 16.3904C12.8877 16.2038 12.1508 16.2214 11.9008 16.4325C11.6508 16.6416 11.713 17.3012 12.0396 17.8974L14.5674 22.5238C14.894 23.1194 16.2019 23.0176 16.5618 22.439C16.5618 22.439 18.0858 20.1908 18.3659 19.3484C18.6461 18.5035 18.1913 17.7278 17.5424 17.5406L17.543 17.5418ZM18.5186 11.0365C18.3383 10.451 17.0857 8.72542 16.4073 8.13745C15.7295 7.54822 14.9543 7.62172 14.5178 8.13933L11.936 11.2149C11.4988 11.7325 11.3819 12.5529 11.6734 13.0353C11.9642 13.5177 12.7419 13.7916 13.4015 13.6434L17.8665 12.8154C18.6725 12.622 18.7008 11.6219 18.5173 11.0365H18.5186Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_21964_211">
+                                            <rect width="18.6109" height="25" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="py-[11.5px]! p-2">
+                            <a href="#"><svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_21964_215)">
+                                        <path
+                                            d="M23.1583 2.60833C22.8917 1.58333 22.0917 0.775 21.0667 0.5C19.225 0 11.825 0 11.825 0C11.825 0 4.43333 0 2.58333 0.5C1.56667 0.775 0.766667 1.58333 0.5 2.60833C0 4.46667 0 8.33333 0 8.33333C0 8.33333 0 12.2083 0.491667 14.0667C0.766667 15.0917 1.56667 15.9 2.58333 16.175C4.43333 16.6667 11.825 16.6667 11.825 16.6667C11.825 16.6667 19.225 16.6667 21.0667 16.175C22.0833 15.9 22.8917 15.0917 23.1583 14.0667C23.6583 12.2083 23.6583 8.33333 23.6583 8.33333C23.6583 8.33333 23.6583 4.46667 23.1583 2.60833ZM9.40833 11.8583V4.81667L15.5917 8.33333L9.40833 11.8583Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_21964_215">
+                                            <rect width="23.6583" height="16.6667" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="py-[9.5px]! px-[9px]">
+                            <a href="#"><svg width="22" height="21" viewBox="0 0 22 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.62967 6.94165H0.119141V20.8333H4.62967V6.94165Z" fill="black" />
+                                    <path
+                                        d="M2.37488 0C0.920413 0 -0.0296144 1.04251 -0.000188801 2.43112C-0.0296144 3.75807 0.919011 4.83141 2.34405 4.83141C3.76909 4.83141 4.77797 3.75807 4.77797 2.43112C4.74854 1.04251 3.82934 0 2.37488 0Z"
+                                        fill="black" />
+                                    <path
+                                        d="M15.8464 6.61523C13.8819 6.61523 12.5325 7.54705 11.7801 8.38918V6.94172H7.26953V20.8334H11.7801V13.0847C11.7801 12.6685 11.8389 12.2243 11.958 11.9567C12.2551 11.1258 12.9963 10.2654 14.2434 10.2654C15.8758 10.2654 16.5288 11.5419 16.5288 13.4111V20.8334H21.0393V12.8479C21.0393 8.57414 18.8142 6.61664 15.8464 6.61664V6.61523Z"
+                                        fill="black" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-7">
+                        <span>©2024 <a href="#" class="text-white!">Blake Charles Salon</a></span>
+                    </div>
+                    <div class="mt-7"><img src="./assets/images/techyscort.png" alt="techyscort"></div>
+                </div>
+
+                <!--  -->
+            </div>
+    </footer>
+
+
     <!-- Scripts -->
     <script src="./assets/js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

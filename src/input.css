@@ -1,7 +1,5 @@
 @import "tailwindcss";
-@import '../public/assets/css/base.css';
-@import '../public/assets/css/components.css';
-@import '../public/assets/css/layout.css';
+@tailwind utilities;
 
 @theme {
   --breakpoint-2xs: 320px;
@@ -11,10 +9,10 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-skin: #E3CCA4;
-  --color-gray: #7E7E7E;
+  --color-skin: #e3cca4;
+  --color-gray: #7e7e7e;
   --color-dark-gray: #282828;
-  --color-light-gray: #EEEEEE;
+  --color-light-gray: #eeeeee;
 
   --heading-1: 64px;
   --heading-2: 48px;
@@ -29,9 +27,245 @@
 
 @font-face {
   font-family: "sinkin-sans-bold";
-  src: url('./assets/Fonts/sinkin-sans.700-bold.otf');
+  src: url("./assets/Fonts/sinkin-sans.700-bold.otf");
 }
 @font-face {
   font-family: "sinkin-sans-regular";
-  src: url('./assets/Fonts/sinkin-sans.400-regular.otf');
+  src: url("./assets/Fonts/sinkin-sans.400-regular.otf");
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  ::after,
+  ::before,
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply m-0 p-0 font-inter;
+  }
+  h1,
+  .h1 {
+    @apply uppercase text-[64px] 2xs:text-center leading-[74px] 2xs:leading-10 500:leading-[50px] md:leading-[60px] lg:leading-[74px] 2xs:text-[30px] 500:text-[40px] md:text-[40px] lg:text-[50px] xl:text-[64px];
+  }
+  h2,
+  .h2 {
+    @apply uppercase text-[48px] leading-[58px] 2xs:text-[21px] 2xs:leading-[30px] 500:leading-[45px] md:leading-[45px] lg:leading-[50px] xl:leading-[58px] 500:text-[30px] md:text-[30px] lg:text-[40px] xl:text-[48px];
+  }
+  h3,
+  .h3 {
+    @apply uppercase text-[24px] 2xs:text-[20px] 500:text-[24px] leading-[34px] text-white font-sinkin-sans-bold;
+  }
+  h4,
+  .h4 {
+    @apply uppercase text-[20px] text-white font-sinkin-sans-bold leading-[30px];
+  }
+  h5,
+  .h5 {
+    @apply text-base text-white font-inter;
+  }
+  p {
+    @apply font-inter text-dark-gray text-base leading-[19px];
+  }
+  a {
+    @apply font-inter;
+  }
+  span {
+    @apply font-inter;
+  }
+  ul {
+    @apply cursor-pointer;
+  }
+  .transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .active_nav {
+    @apply bg-black max-w-full transition top-0 flex justify-between fixed w-full z-50  items-center py-5;
+  }
+  .vertical-divider {
+    @apply min-w-[3px] bg-gray items-center h-full 2xs:hidden lg:block;
+  }
+}
+
+@layer components {
+  .container-md {
+    @apply 2xs:px-5 sm:px-7 md:px-[55px];
+  }
+  .btn {
+    @apply py-[5.5px] px-[23.5px] border-2 border-skin text-skin font-inter font-bold uppercase cursor-pointer transition-all duration-700 ease-in-out;
+  }
+  .black-border-btn {
+    @apply hover:bg-skin hover:border-skin hover:text-black;
+  }
+  .announcement-btn div {
+    @apply 2xs:w-full 2xs:text-center sm:w-fit sm:justify-between content-center;
+  }
+  .bg-skin-btn {
+    @apply bg-skin text-black! hover:bg-transparent! hover:text-skin! mt-[30px] w-fit!;
+  }
+  .content-container-right {
+    @apply flex gap-10 2xs:gap-0 lg:gap-10 items-center my-20 2xs:my-[30px] 500:my-[60px] md:my-20;
+  }
+  .inner-container-right {
+    @apply mr-[100px] py-5 2xs:mx-5 lg:ml-0 lg:mr-[100px] 2xs:py-0 lg:py-5;
+  }
+  .content-container-right-career {
+    @apply flex gap-10 2xs:gap-0 lg:gap-10 items-center my-20 2xs:my-[30px] 500:my-[60px] md:my-[110px] lg:my-[159px];
+  }
+  .perks-and-benefits-section .card{
+    @apply w-fit justify-items-center justify-self-center;
+  }
+  .job-opportunities-section .container{
+    @apply justify-self-center text-center;
+  }
+  .job-opportunities-section .card-hover{
+    @apply relative hover:cursor-pointer;
+  }
+}
+
+@layer utilities {
+  nav > div:first-of-type {
+    @apply text-white font-inter font-normal leading-[19px] tracking-[0.003em];
+  }
+  nav > div a {
+    @apply hover:text-skin;
+  }
+  #mobileMenu li {
+    @apply hover:text-gray-200 py-4 px-6;
+  }
+  nav img {
+    @apply big:max-w-[297.54px] big:max-h-20 2xs:max-w-[180px] 2xs:max-h-20 500:max-w-[210px] 500:max-h-20;
+  }
+  nav button svg {
+    @apply w-8 h-8 text-white cursor-pointer;
+  }
+  #announcement-bar,
+  #mobileMenu {
+    @apply bg-black;
+  }
+  #announcement-bar,
+  #announcement-bar span,
+  .experience h2,
+  .experience p,
+  .hero-section .hero-text {
+    @apply text-white;
+  }
+  #img-container {
+    @apply relative max-w-[756px] min-h-[654px] 2xs:min-h-0 2xs:max-w-fit lg:w-3/2 xl:max-w-[756px] xl:min-h-[654px];
+  }
+  .left-img-container {
+    @apply 2xs:min-h-0! xl:min-h-[575px]! w-7/2!;
+  }
+  #img-container img {
+    @apply w-full h-full object-cover;
+  }
+  #mobileMenu {
+    @apply absolute top-[87px] -z-10 right-0 h-fit w-full text-skin border opacity-0 group-focus:right-0 group-focus:opacity-100 transition;
+  }
+  p span {
+    @apply block;
+  }
+  #img-container-careers {
+    @apply relative max-w-[756px] min-h-[550px] 2xs:min-h-0 2xs:max-w-fit lg:w-7/3 xl:max-w-[756px] xl:min-h-[550px];
+  }
+  .link-effect {
+    /* relative */
+    @apply after:absolute after:inset-0 after:w-full after:h-full;
+  }
+  .bg-black {
+    @apply bg-black;
+  }
+  /* image and text container */
+  .experience-main {
+    @apply relative inset-0 text-center px-64 py-20 2xs:px-5! 500:px-[60px]! md:px-20! lg:px-32! xl:px-64! 2xs:py-[30px] 500:py-[50px] md:py-20;
+  }
+  .featured-in-section .featured-in .img-1 {
+    @apply h-fit self-center;
+  }
+  .horizontal-divider {
+    @apply bg-gray h-[3px];
+  }
+  footer .main {
+    @apply flex pt-10 justify-between pb-[55px] gap-5 max-[1150px]:flex-wrap;
+  }
+  footer a {
+    @apply text-skin hover:underline;
+  }
+  .footer-heading a {
+    @apply text-[24px] text-skin font-inter font-bold;
+  }
+  .footer-experiance a {
+    @apply text-skin font-inter font-normal block leading-[19px] mt-2.5;
+  }
+  footer .icons div {
+    @apply bg-skin rounded-full w-fit h-fit py-2 hover:bg-gray;
+  }
+  footer span {
+    @apply text-white font-bold font-inter leading-[19px];
+  }
+  .job-opportunities-section .heading{
+    @apply text-black! mt-3.5;
+  }
+  .job-opportunities-section .p{
+    @apply mt-3.5;
+  }
+  .job-opportunities-section .a{
+    @apply uppercase font-inter font-bold flex gap-2.5 items-center pt-[4.5px] mt-3.5 justify-center after:absolute after:inset-0 after:w-full after:h-full transition;
+  }
+  .perks-and-benefits-section .headeing{
+    @apply text-white w-fit text-center mt-7 max-w-[210px];
+  }
+}
+
+/* custom css */
+.hero-gradiant {
+  background: radial-gradient(
+      114.6% 55.11% at 50% 58.09%,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 50%);
+}
+.img-gradiant-right {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 56.81%,
+    #ffffff 100%
+  );
+}
+.img-gradiant-left {
+  background: linear-gradient(90deg, #eeeeee 0%, rgba(238, 238, 238, 0) 25%);
+}
+.bg-bled {
+  background-blend-mode: luminosity, normal;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  animation: marquee 15s linear infinite;
+}
+.marquee > * {
+  flex-shrink: 0;
+}
+.swiper {
+  width: 100%;
+  /* position: relative; */
+
+}
+
+.swiper-slide {
+  /* position: absolute; */
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
