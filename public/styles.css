@@ -1493,7 +1493,6 @@
     align-items: center;
     justify-content: center;
     gap: calc(var(--spacing) * 2.5);
-    padding-top: 4.5px;
     font-family: var(--font-inter);
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
