@@ -1258,7 +1258,6 @@
     object-fit: cover;
   }
   .content-container-left-what {
-    margin-block: 180.5px;
     display: flex;
     align-items: center;
     gap: calc(var(--spacing) * 10);
@@ -1275,9 +1274,12 @@
       margin-block: 70px;
     }
     @media (width >= 40rem) {
-      margin-block: 100px;
+      margin-block: 60px;
     }
     @media (width >= 48rem) {
+      margin-block: 110px;
+    }
+    @media (width >= 64rem) {
       margin-block: 180.5px;
     }
     @media (width >= 64rem) {
@@ -1699,7 +1701,7 @@
   }
 }
 .marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 .marquee > * {
   flex-shrink: 0;

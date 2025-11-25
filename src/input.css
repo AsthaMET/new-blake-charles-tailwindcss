@@ -129,7 +129,7 @@
     @apply justify-self-center w-full object-cover;
   }
   .content-container-left-what {
-    @apply flex gap-10 2xs:gap-0 lg:gap-10 items-center my-[180.5px] 2xs:my-[30px] xs:my-[45px] 500:my-[70px] sm:my-[100px] md:my-[180.5px];
+    @apply flex gap-10 2xs:gap-0 lg:gap-10 items-center 2xs:my-[30px] xs:my-[45px] 500:my-[70px] sm:my-[60px] md:my-[110px] lg:my-[180.5px];
   }
 }
 
@@ -296,7 +296,7 @@
   } */
 }
 .marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 .marquee > * {
   flex-shrink: 0;
