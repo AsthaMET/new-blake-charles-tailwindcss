@@ -1693,8 +1693,8 @@
 .bg-bled {
   background-blend-mode: luminosity, normal;
 }
-.card-hover:hover a {
-  transform: scale(1.2);
+.card-hover:hover img {
+  scale: 0.9;
 }
 .active_nav {
   background-color: black !important;
