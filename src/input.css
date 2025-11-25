@@ -280,6 +280,9 @@
 .bg-bled {
   background-blend-mode: luminosity, normal;
 }
+.card-hover:hover a{
+  transform: scale(1.2);
+}
 .active_nav {
     /* bg-black max-w-full transition top-0 flex justify-between fixed w-full z-50  items-center py-5; */
     background-color: black !important;
